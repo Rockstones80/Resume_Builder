@@ -84,14 +84,14 @@ const Login = () => {
             <button className="flex items-center justify-center gap-3 w-full py-2 px-4 rounded-lg bg-white text-gray-700 border border-gray-300 mb-2 hover:bg-gray-100 transition-colors duration-300">
               <FcGoogle />
               { 
-                isSignUp ? (<>{'Sign up with'}<span className="font-bold text-[#8910F1] ml-[-5px]">Google</span></>) : (<>{'Login with'}<span className="font-bold text-[#8910F1] ml-[-5px]">Google</span></>)
+                isSignUp ? (<>{'Sign up with'}<span className="font-bold ml-[-5px]">Google</span></>) : (<>{'Login with'}<span className="font-bold ml-[-5px]">Google</span></>)
               }
               
             </button>
             <button className="flex items-center justify-center gap-3 w-full py-2 px-3 rounded-lg bg-white text-gray-700 border border-gray-300 mb-2 hover:bg-gray-100 transition-colors duration-300">
               <FaFacebookSquare color="blue" />
               { 
-                isSignUp ? (<>{'Sign up with'}<span className="font-bold text-[#8910F1] ml-[-5px]">Facebook</span></>) : (<>{'Login with'}<span className="font-bold text-[#8910F1] ml-[-5px]">Facebook</span></>)
+                isSignUp ? (<>{'Sign up with'}<span className="font-bold ml-[-5px]">Facebook</span></>) : (<>{'Login with'}<span className="font-bold ml-[-5px]">Facebook</span></>)
               }
             </button>
             {
@@ -115,10 +115,10 @@ const Login = () => {
         }}
       >
         <div className=" w-[290px] h-[384px] bg-white  bg-opacity-20 rounded-3xl relative border border-slate-500">
-          <p className=" max-w-[184px] font-bold text-white text-3xl absolute top-[5%] font-sans pl-4">Very good works are waiting for you Login Now!!!</p>
+          <p className=" max-w-[184px] font-bold text-white text-3xl absolute top-[5%] font-sans pl-4">Very good works are waiting for you {!isSignUp? ('Login Now!!!'): ('Sign Up!!!')}</p>
           <img src={Group11} alt="" className=" absolute right-[90%] top-[70%]" />
         </div>
-          <img src={women} alt="" className=" absolute bottom-[133px]" />
+          <img src={women} alt="" className=" absolute bottom-[127px]" />
       </div>
     </div>
   );
