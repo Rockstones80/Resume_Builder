@@ -5,15 +5,22 @@ import { FcGoogle } from "react-icons/fc";
 import { FaFacebookSquare } from "react-icons/fa";
 import women from "../../assets/women.svg";
 import Group11 from "../../assets/Group11.svg";
+import { useState } from "react";
 
 const Login = () => {
+
+  const [isSignUp, setSignUp] = useState(false);
+
+  
+
   return (
     <div className=" grid grid-cols-2 my-12 mx-20 bg-white rounded-3xl shadow-lg">
       <div className="flex justify-center py-10 px-8">
         <div className=" flex flex-col">
           <p className=" text-3xl font-bold text-center">
-            {" "}
-            Resum<span className=" text-[#8910F1]">o</span>
+           {
+            isSignUp ? ('Sign up an Account') : (<>{'Resum'}<span className="text-[#8910F1]">o</span></>)
+           }
           </p>
           <p className=" text-[16px] mb-[24px] text-center">
             Securely login to your Resum
