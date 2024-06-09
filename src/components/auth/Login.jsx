@@ -118,7 +118,7 @@ const Login = () => {
           <p className=" max-w-[184px] font-bold text-white text-3xl absolute top-[5%] font-sans pl-4">Very good works are waiting for you Login Now!!!</p>
           <img src={Group11} alt="" className=" absolute right-[90%] top-[70%]" />
         </div>
-          <img src={women} alt="" className=" absolute bottom-[133px]" />
+          <img src={women} alt="" className=" absolute bottom-[224px]" />
       </div>
     </div>
   );
