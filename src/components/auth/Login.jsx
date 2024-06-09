@@ -109,16 +109,28 @@ const Login = () => {
         </div>
       </div>
       <div
-        className=" bg-cover bg-center w-[100%] h-[530px] rounded-r-3xl flex justify-center items-center "
+        className=" bg-cover bg-center w-[100%] h-[530px] rounded-r-3xl flex justify-center p-20 relative"
         style={{
-          backgroundImage: `url(${Rectangle2})`,
+          backgroundImage: `url(${Rectangle2})`, 
         }}
       >
-        <div className=" w-[290px] h-[384px] bg-white  bg-opacity-20 rounded-3xl relative border border-slate-500">
-          <p className=" max-w-[184px] font-bold text-white text-3xl absolute top-[5%] font-sans pl-4">Very good works are waiting for you {!isSignUp? ('Login Now!!!'): ('Sign Up!!!')}</p>
-          <img src={Group11} alt="" className=" absolute right-[90%] top-[70%]" />
+        <div className="  px-40 relative bg-white  bg-opacity-20 rounded-3xl border border-slate-500 flex">
+          <p className=" max-w-[184px] font-bold text-white text-3xl absolute top-[5%] font-sans left-8">
+            Very good works are waiting for you{" "}
+            {!isSignUp ? "Login Now!!!" : "Sign Up!!!"}
+          </p>
+          <img
+            src={Group11}
+            alt=""
+            className=" absolute right-[93%] top-[70%]"
+          />
+          
         </div>
-          <img src={women} alt="" className=" absolute bottom-[127px]" />
+        <img
+          src={women}
+          alt=""
+          className="absolute bottom-20 left-4"
+        />
       </div>
     </div>
   );
