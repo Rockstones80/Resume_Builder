@@ -9,14 +9,18 @@ import Group11 from "../../assets/Group11.svg";
 import { useState } from "react";
 
 const Login = () => {
-
   const [isSignUp, setSignUp] = useState(false);
-
+  const [email, setEmail] = useState("")
+  const [username, setUsername] = useState("")
+  const [password, setPassword] = useState("")
 
   const toggleSignUp = () => {
     setSignUp( !isSignUp)
   }
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+  }
   
 
   return (
@@ -33,7 +37,7 @@ const Login = () => {
               isSignUp ? (<>{'Securely to your Resum'}<span className="text-[#8910F1]">o</span></>) : (<> {'Securely login to your Resum'}<span className=" text-[#8910F1]">o</span> </>)
             }
           </p>
-          <form action="" className="flex flex-col gap-[18px]">
+          <form onSubmit={handleSubmit} className="flex flex-col gap-[18px]">
             {
               isSignUp ? (
               <div className=" flex items-center py-1 w-[356px] pl-5 rounded-xl gap-4 bg-[#F0EDFF]">
@@ -42,17 +46,23 @@ const Login = () => {
                 type="email"
                 name="email"
                 placeholder="Email"
+                value={email}
                 className="py-2 w-[290px] px-2 outline-0 bg-inherit text-black"
+                onChange={(e) => {
+                  setEmail(e.target.value)
+                }}
                 />
             </div>)
             :(
             <div className=" flex items-center py-1 w-[356px] pl-5 rounded-xl gap-4 bg-[#F0EDFF]">
               <FiUser />
               <input
-                type="text"
-                name="Username"
+                type="email"
+                name="username"
                 placeholder="Username"
+                value={username}
                 className="py-2 w-[290px] px-2 outline-0 bg-inherit text-black"
+                onChange={(e) => setUsername(e.target.value)}
                 />
             </div>)
               }
@@ -60,9 +70,12 @@ const Login = () => {
               <RiLock2Line />
               <input
                 type="password"
-                name="Password"
+                name="password"
                 placeholder="Password"
-                className=" py-2 w-[290px] px-2 outline-0 bg-inherit text-black"
+                value={password}
+                className=" py-2 w-[290px] px-2 outline-0 
+                bg-inherit text-black"
+                onChange={(e) => setPassword(e.target.value)}
               />
             </div>
             <div className=" flex justify-center">
